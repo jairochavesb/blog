@@ -4,7 +4,7 @@ title: Jairo's Blog
 ---
 
 <center>
-<img src="http://127.0.0.1:4000/images/golangLogoGopher.png" style="width:300px;height:150px;">
+<img src="https://github.com/jairochavesb/blog/images/golangLogoGopher.png" style="width:300px;height:150px;">
 </center>
 <br>
 <h6>November 29<sup>th</sup>, 2021</h6>
@@ -90,4 +90,4 @@ Thanks for reading!
 
 
 
-[back](./)
+[back](https://github.com/jairochavesb/blog/)
