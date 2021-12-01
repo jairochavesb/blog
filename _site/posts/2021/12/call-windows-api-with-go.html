@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Jairo’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Jairo’s Blog" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/posts/2021/12/call-windows-api-with-go.html" />
+<meta property="og:url" content="http://localhost:4000/posts/2021/12/call-windows-api-with-go.html" />
+<meta property="og:site_name" content="Jairo’s Blog" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Jairo’s Blog" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/posts/2021/12/call-windows-api-with-go.html","@type":"WebPage","headline":"Jairo’s Blog","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Jairo's Blog</h1>
+      <h2 class="project-tagline"></h2>
+      
+      
+        <a href="http://127.0.0.1:4000/about.html" class="btn">About</a>
+        <a href="http://127.0.0.1:4000/archives.html" class="btn">Archives</a>
+        <a href="http://127.0.0.1:4000/index.html" class="btn">Latest Posts</a>
+        <a href="https://www.github.com/jairochavesb/" class="btn">View on GitHub</a>
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <center>
+<img src="http://127.0.0.1:4000/images/golangLogoGopher.png" style="width:300px;height:150px;" />
+</center>
+<p><br /></p>
+<h6>November 29<sup>th</sup>, 2021</h6>
+<h2>Calling Windows APIs with Go</h2>
+<p>I took the decision to learn a new programming language, after looking for a while I did choose Go.</p>
+
+<p>In order to practice this new languge I tried to write a simple malware and this exercise did lead
+me to wonder… how I can call Windows APIs with Go?</p>
+
+<p>I did a little research and found how to do it, let’s see!</p>
+
+<p>The package that will do the magic is the <a href="https://pkg.go.dev/golang.org/x/sys/windows">windows</a> package and can be added to your project with the following command:</p>
+
+<pre><code>go get golang.org/x/sys/windows</code></pre>
+<p><br /></p>
+<h4>Example #1. Calling IsDebuggerPresent.</h4>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="p">(</span>
+   <span class="s">"fmt"</span>
+   <span class="s">"syscall"</span>
+   <span class="s">"unsafe"</span>
+
+   <span class="s">"golang.org/x/sys/windows"</span>
+<span class="p">)</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+
+   <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Calling IsDebuggerPresent from kernel32.dll"</span><span class="p">)</span>
+   <span class="n">kernel32DLL</span> <span class="o">:=</span> <span class="n">windows</span><span class="o">.</span><span class="n">NewLazyDLL</span><span class="p">(</span><span class="s">"kernel32.dll"</span><span class="p">)</span>
+
+   <span class="n">isDebuggerPresent</span> <span class="o">:=</span> <span class="n">kernel32DLL</span><span class="o">.</span><span class="n">NewProc</span><span class="p">(</span><span class="s">"IsDebuggerPresent"</span><span class="p">)</span>
+
+   <span class="n">debuggerPresent</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">isDebuggerPresent</span><span class="o">.</span><span class="n">Call</span><span class="p">()</span>
+   <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Result: "</span><span class="p">,</span> <span class="n">debuggerPresent</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In this example, the API will return a 0 because it is not running in a debugger, otherwise the
+output will be 1.
+<br />
+<br /></p>
+<h4>Example #2. Calling MessageBoxW.</h4>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="p">(</span>
+   <span class="s">"fmt"</span>
+   <span class="s">"syscall"</span>
+   <span class="s">"unsafe"</span>
+
+   <span class="s">"golang.org/x/sys/windows"</span>
+<span class="p">)</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Calling MessageBoxW from user32.dll"</span><span class="p">)</span>
+
+   <span class="n">user32dll</span> <span class="o">:=</span> <span class="n">windows</span><span class="o">.</span><span class="n">NewLazyDLL</span><span class="p">(</span><span class="s">"user32.dll"</span><span class="p">)</span>
+   <span class="n">messageBoxW</span> <span class="o">:=</span> <span class="n">user32dll</span><span class="o">.</span><span class="n">NewProc</span><span class="p">(</span><span class="s">"MessageBoxW"</span><span class="p">)</span>
+
+   <span class="n">showMessageBox</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">messageBoxW</span><span class="o">.</span><span class="n">Call</span><span class="p">(</span>
+      <span class="kt">uintptr</span><span class="p">(</span><span class="m">0</span><span class="p">),</span>
+      <span class="kt">uintptr</span><span class="p">(</span><span class="n">unsafe</span><span class="o">.</span><span class="n">Pointer</span><span class="p">(</span><span class="n">syscall</span><span class="o">.</span><span class="n">StringToUTF16Ptr</span><span class="p">(</span><span class="s">"I am a message box! :)"</span><span class="p">))),</span>
+      <span class="kt">uintptr</span><span class="p">(</span><span class="n">unsafe</span><span class="o">.</span><span class="n">Pointer</span><span class="p">(</span><span class="n">syscall</span><span class="o">.</span><span class="n">StringToUTF16Ptr</span><span class="p">(</span><span class="s">"Hi!"</span><span class="p">))),</span>
+      <span class="kt">uintptr</span><span class="p">(</span><span class="m">0x00000000</span><span class="p">),</span>
+   <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This one is a little bit complicated because the MessageBoxW API will need at least 3 arguments.</p>
+
+<p>As it can be observed, calling Windows APIs from Go is not difficult, maybe the most tedious task is to
+read the API documentation to check which arguments it will use.</p>
+
+<p>Thanks for reading!</p>
+
+<p><a href="./">back</a></p>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
