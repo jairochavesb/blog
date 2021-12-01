@@ -4,7 +4,7 @@ title: Jairo's Blog
 ---
 
 <center>
-<img src="https://github.com/jairochavesb/blog/images/golangLogoGopher.png" style="width:300px;height:150px;">
+<img src="https://jairochavesb.github.io/blog/images/golangLogoGopher.png" style="width:300px;height:150px;">
 </center>
 <br>
 <h6>November 29<sup>th</sup>, 2021</h6>
