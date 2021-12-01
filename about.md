@@ -3,8 +3,6 @@ layout: default
 title: Jairo's Blog
 ---
 
-<!-- <img src="http://127.0.0.1:4000/images/Padlock-keyboard-key.jpg"> -->
-
 <h2>Hi! I am Jairo.</h2>
 
 I am a cybersecurity analyst, Linux and automation obsessed.
