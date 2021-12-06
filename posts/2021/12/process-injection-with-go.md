@@ -129,7 +129,7 @@ func newWindowsProcess(e *PROCESSENTRY32, handle uintptr) {
 
 The next image displays a segment of the results shown by the last code.
 
-<img src="https://jairochavesb.github.io/blog/images/process_injection_with_go/img001.png">
+<img src="https://jairochavesb.github.io/blog/images/process-injection-with-go/img001.png">
 
 Now, being able to list Windows processes, I can move to the next steps.
 
@@ -211,17 +211,17 @@ func main() {
 ```
 Before running this code, I did open ProcessHacker and I did located the Notepad.exe process as follows:
 
-<img src="https://jairochavesb.github.io/blog/images/process_injection_with_go/img002.png">
+<img src="https://jairochavesb.github.io/blog/images/process-injection-with-go/img002.png">
 
 In the memory section, we can see all the addresses allocated for the Notepad.exe.
 
-<img src="https://jairochavesb.github.io/blog/images/process_injection_with_go/img003.png">
+<img src="https://jairochavesb.github.io/blog/images/process-injection-with-go/img003.png">
 
 Running the last Go code and providing the current Notepad.exe PID, it can be seen how the program returns a address:
 
-<img src="https://jairochavesb.github.io/blog/images/process_injection_with_go/img005.png">
+<img src="https://jairochavesb.github.io/blog/images/process-injection-with-go/img005.png">
 
-<img src="https://jairochavesb.github.io/blog/images/process_injection_with_go/img004.png">
+<img src="https://jairochavesb.github.io/blog/images/process-injection-with-go/img004.png">
 
 Excellent, I wrote code able to call Windows APIs to allocate new memory space in a remote process.
 
@@ -335,11 +335,11 @@ Let's run the previous code.
 
 Once again, open notepad.exe, check it's pid in ProcessHacker and keep an eye at the memory allocations.
 
-<img src="https://jairochavesb.github.io/blog/images/process_injection_with_go/img006.png">
+<img src="https://jairochavesb.github.io/blog/images/process-injection-with-go/img006.png">
 
-<img src="https://jairochavesb.github.io/blog/mages/process_injection_with_go/img007.png">
+<img src="https://jairochavesb.github.io/blog/mages/process-injection-with-go/img007.png">
 
-<img src="https://jairochavesb.github.io/blog/images/process_injection_with_go/img008.png">
+<img src="https://jairochavesb.github.io/blog/images/process-injection-with-go/img008.png">
 
 Wow! I did write to the remote process memory successfully! 
 
@@ -498,9 +498,9 @@ execute the Windows calculator. I did not wanted to use any known program for th
 
 The following gif shows the injector program running and popping up a windows calculator.
 
-<img src="https://jairochavesb.github.io/blog/images/process_injection_with_go/demo.gif" style="width:1000px;height:500px;">
+<img src="https://jairochavesb.github.io/blog/images/process-injection-with-go/demo.gif" style="width:1000px;height:500px;">
 
-<a href="https://jairochavesb.github.io/blog/images/process_injection_with_go/demo.gif" target=blank>Full window gif</a>
+<a href="https://jairochavesb.github.io/blog/images/process-injection-with-go/demo.gif" target=blank>Full window gif</a>
 
 I had a very entertained day polishing what I already know about Windows APIs, Go and how malware can
 abuse Windows APIs.
