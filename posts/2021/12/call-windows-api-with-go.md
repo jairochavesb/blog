@@ -7,7 +7,7 @@ title: Jairo's Blog
 <img src="https://jairochavesb.github.io/blog/images/golangLogoGopher.png" style="width:300px;height:150px;">
 </center>
 <br>
-<h6>November 29<sup>th</sup>, 2021</h6>
+<h6>December 2<sup>nd</sup>, 2021</h6>
 <h2>Calling Windows APIs with Go</h2>
 I took the decision to learn a new programming language, after looking for a while I did choose Go.
 
