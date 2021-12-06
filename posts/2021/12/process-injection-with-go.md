@@ -6,7 +6,7 @@ title: Jairo's Blog
 <center>
 <img src="https://www.pccybersecurity.com/images/blog/code-injection.png">
 </center>
-<h6>December 2<sup>nd</sup>, 2021</h6>
+<h6>December 6<sup>th</sup>, 2021</h6>
 ## Process Injection With Go.
 The idea of this post is to learn how to perform a remote process injection using the Windows APIs and
 the Go /x/sys/windows package.
