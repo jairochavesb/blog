@@ -3,7 +3,7 @@ layout: default
 title: Jairo's Blog
 ---
 
-<h2>Hi! I am Jairo</h2>
+<h2>Hi! I am Jairo.</h2>
 
 I am a cybersecurity analyst, Linux and automation obsessed.
 
