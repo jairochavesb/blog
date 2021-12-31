@@ -11,7 +11,7 @@ title: Jairo's Blog
 <h2>Calling Windows APIs with Go</h2>
 I took the decision to learn a new programming language, after looking for a while I did choose Go.
 
-In order to practice this new languge I tried to write a simple malware and this exercise did lead
+In order to practice this new languge I tried to write a simple malware for a ransomware simulation in my workplace and this exercise did lead
 me to wonder... how I can call Windows APIs with Go?
 
 I did a little research and found how to do it, let's see!
