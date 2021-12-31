@@ -5,7 +5,7 @@ title: Jairo's Blog
 
 <center>
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Go_gopher_five_years.jpg">
-<h4> Gopher image by Renee French, licensed under Creative Commons 3.0 Attributions license. </h4>
+<h6> Gopher image by Renee French, licensed under Creative Commons 3.0 Attributions license. </h6>
 </center>
 <h6>December 31<sup>st</sup>, 2021</h6>
 
