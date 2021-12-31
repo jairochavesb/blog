@@ -48,6 +48,7 @@ title: Jairo's Blog
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search post titles..." title="Type in a name">
 
 <ul id="myUL">
+  <li><a href="https://jairochavesb.github.io/blog/posts/2021/12/cracking-challenge-by-disip.md">Crackmes.one - Cracking challenge by Disip</a>
   <li><a href="https://jairochavesb.github.io/blog/posts/2021/12/process-injection-with-go.html">Process Injection with Go</a></li>
   <li><a href="https://jairochavesb.github.io/blog/posts/2021/12/call-windows-api-with-go.html">Calling Windows APIs with Go</a></li>
 </ul>
