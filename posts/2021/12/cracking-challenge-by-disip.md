@@ -33,7 +33,7 @@ I went to the program entry point and searched for referenced strings.
 
 <img src="http://127.0.0.1:4000/images/cracking-challenge-by-disip/img003.png">
 
-Nice, the error messagebox text was located easily. I clicked on it to go to the disassembly code using this string is located.
+Nice, the error message box text was located easily. I clicked on it to go to the assembly code that will use this string.
 
 <img src="http://127.0.0.1:4000/images/cracking-challenge-by-disip/img004.png">
 
@@ -53,7 +53,7 @@ Then it checks that any of the characters in the name are not 'Z', 'z' or '9', i
 
 For example, if the username contains a 'Z', this letter will be converted to 'Y', if it is a '9' then it will become an '8' and so on, this will be done with the <b>dec bl</b> instructions.
 
-In this example, eax is acting as a counter, in other words, as per every username character checked, eax will increment by 1, and on every loop, eax then added <b>61</b>, for example:
+In this example, eax is acting as a counter, in other words, as per every username character checked, eax will increment by 1, and on every loop, and then <b>61</b> will be added to eax, for example:
 
 > Loop 0: eax = 0; eax + 61 = 61
 >
@@ -61,7 +61,7 @@ In this example, eax is acting as a counter, in other words, as per every userna
 >
 > Loop 3: eax = 2; eax + 61 = 63
 
-Now on address <b>1040112A</b>, we can consider that as a concatenation, the value stored in eax (a counter value + 61) is moved to bh, and in bl we have one of the username chars, let's check the next example:
+Now on address <b>1040112A</b>, we can consider it as a concatenation, the value stored in eax (a counter value + 61) is moved to bh, and in bl we have one of the username chars, let's check the next example:
 
 > eax = 0
 >
@@ -75,7 +75,7 @@ Then, the program takes 2 bytes from the serial and compares it with the 616B va
 
 Because this comparison fails, the program will display the wrong serial message.
 
-Ok, having figured out what happens in the first loop, I can code a small program to generate a valid serial from a username, what we saw until here, will be reapeted on every username character.
+Ok, having figured out what happens in the first loop, I can code a small program to generate a valid serial from a username, what we saw until here, will be reapeted for every username character.
 
 Here the serial generator in Go.
 
