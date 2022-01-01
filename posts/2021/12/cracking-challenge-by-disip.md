@@ -20,28 +20,28 @@ Ok, let's get to work on it.
 
 Running the program for the first time we can see a small dialog box as follows:
 
-<img src="https://jairochavesb.github.io/images/cracking-challenge-by-disip/img001.png">
+<img src="https://jairochavesb.github.io/blog/images/cracking-challenge-by-disip/img001.png">
 
 Providing a random text will generate an error (of course! we don't know the correct serial).
 
-<img src="https://jairochavesb.github.io/images/cracking-challenge-by-disip/img002.png">
+<img src="https://jairochavesb.github.io/blog/images/cracking-challenge-by-disip/img002.png">
 
 I will assume the code in charge to process the user input could be close this messagebox call.
 Let's check the code in x64dbg.
 
 I went to the program entry point and searched for referenced strings.
 
-<img src="https://jairochavesb.github.io/images/cracking-challenge-by-disip/img003.png">
+<img src="https://jairochavesb.github.io/blog/images/cracking-challenge-by-disip/img003.png">
 
 Nice, the error message box text was located easily. I clicked on it to go to the assembly code that will use this string.
 
-<img src="https://jairochavesb.github.io/images/cracking-challenge-by-disip/img004.png">
+<img src="https://jairochavesb.github.io/blog/images/cracking-challenge-by-disip/img004.png">
 
 As seen in the last image, the message for the good serial is also there, and scrolling a little bit up I saw the API calls to get the text boxes data and the code to generate the serial based on the name.
 
 The code that is of our interest is the following:
 
-<img src="https://jairochavesb.github.io/images/cracking-challenge-by-disip/img005.png">
+<img src="https://jairochavesb.github.io/blog/images/cracking-challenge-by-disip/img005.png">
 
 I will explain each part briefly.
 
@@ -121,7 +121,7 @@ func main() {
 
 Let's test if this works...
 
-<img src="https://jairochavesb.github.io/images/cracking-challenge-by-disip/img006.png">
+<img src="https://jairochavesb.github.io/blog/images/cracking-challenge-by-disip/img006.png">
 
 Awesome! It generates valid serials!
 
