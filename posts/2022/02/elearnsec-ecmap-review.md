@@ -77,7 +77,7 @@ But if you are like me, a little bit paranoid person and if you want to go for t
 
 The next important thing is practice. Practice as much as you can so you can be confident and also perform the analysis tasks almost automatically.
 
-What I did was to code the book samples into Golang (I also wanted to code and practice Go :P), code your own PoC, for example, I did investigate how to call APIs from Go and I implemented a tool to edit the windows registry, I also coded a program to perform process injection; then I did analyze those programs using the methodology taught in the course and the book.
+What I did was to code the book samples into Golang (I also wanted to code and practice Go :P), code your own PoC, for example, I did investigate how to call APIs from Go and I implemented a tool to edit the Window's registry, I also coded a program to perform process injection; then I did analyze those programs using the methodology taught in the course and the book.
 
 When you are more confortable with the analysis process, then go and dissect a real malware! Create your dedicated lab for it, I reused an old pc for my malware anlysis lab and created a dedicated isolated network away from my other devices.
 
