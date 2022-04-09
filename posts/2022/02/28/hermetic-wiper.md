@@ -13,7 +13,7 @@ title: Jairo's Blog
 Hermetic Wiper is a malware used recently on a targeted attack to Ukraine, this wiper affects the system restore capabilities by disabling the Volume Shadow Copy service,
 it also corrupts the MBR by using drivers embedded in its resource section to render the systems unbootable.
 
-The drivers are downloaded into <b>C:\Windows\System32\drivers\ </b>, this drier name will consist in two random characters plus the “dr”, generating a file like <b>C:\Windows\System32\drivers\fgrd.sys</b>.
+The drivers are downloaded into <b>C:\Windows\System32\drivers\ </b>, this driver name will consist in two random characters plus the “dr”, generating a file like <b>C:\Windows\System32\drivers\fgrd.sys</b>.
 
 In order to load use the drivers, the wiper is capable to adjust its own permissions allowing it to load them on memory and then execute them.
 
