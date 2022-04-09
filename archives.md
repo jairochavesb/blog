@@ -49,7 +49,7 @@ title: Jairo's Blog
 
 <ul id="myUL">
   <li><a href="https://jairochavesb.github.io/blog/posts/2022/02/28/hermetic-wiper.html">Analysis - Hermetic Wiper</a></li>
-  <li><a href="https://jairochavesb.github.io/blog/posts/2022/02/elearnsec-ecmap-review.html">eLearnSecurity - Certified Malware Analysis Professional</a></li>
+  <li><a href="https://jairochavesb.github.io/blog/posts/2022/02/16/elearnsec-ecmap-review.html">eLearnSecurity - Certified Malware Analysis Professional</a></li>
   <li><a href="https://jairochavesb.github.io/blog/posts/2021/12/cracking-challenge-by-disip.html">Crackmes.one - Cracking challenge by Disip</a></li>
   <li><a href="https://jairochavesb.github.io/blog/posts/2021/12/process-injection-with-go.html">Process Injection with Go</a></li>
   <li><a href="https://jairochavesb.github.io/blog/posts/2021/12/call-windows-api-with-go.html">Calling Windows APIs with Go</a></li>
