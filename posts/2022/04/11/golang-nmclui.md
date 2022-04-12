@@ -8,7 +8,7 @@ title: Jairo's Blog
 </center>
 <h6>April 11<sup>th</sup>, 2022</h6>
 
-# Golang - Network Manager Go Text User Interface.
+# Golang - NMCLI Text User Interface.
 
 My malware analysis pc died a month ago approximately, and since this was a very long weekend with a holiday extending it, I used this time to learn a new tool in the meantime I
 acquired a new pc and installed all the tools I need.
@@ -24,8 +24,8 @@ The project is here: <a href="https://github.com/jairochavesb/nmclui"> nmclui </
 
 And here some screenshots.
 
-<img src="https://github.com/jairochavesb/nmclui/tree/main/screenshots/screenshot1.png">
+<img src="https://raw.githubusercontent.com/jairochavesb/nmclui/main/screenshots/screenshot1.png">
 
-<img src="https://github.com/jairochavesb/nmclui/tree/main/screenshots/screenshot2.png">
+<img src="https://raw.githubusercontent.com/jairochavesb/nmclui/main/screenshots/screenshot2.png">
 
 
