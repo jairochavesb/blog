@@ -24,8 +24,8 @@ The project is here: <a href="https://github.com/jairochavesb/nmclui"> nmclui </
 
 And here some screenshots.
 
-<img src="https://github.com/jairochavesb/nmclui/blob/main/screenshots/screenshot1.png">
+<img src="https://github.com/jairochavesb/nmclui/tree/main/screenshots/screenshot1.png">
 
-<img src="https://github.com/jairochavesb/nmclui/blob/main/screenshots/screenshot2.png">
+<img src="https://github.com/jairochavesb/nmclui/tree/main/screenshots/screenshot2.png">
 
 
