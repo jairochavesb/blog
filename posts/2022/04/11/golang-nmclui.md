@@ -10,7 +10,7 @@ title: Jairo's Blog
 
 # Golang - NMCLI Text User Interface.
 
-My malware analysis pc died a month ago, and since this was a very long weekend with a holiday extending it, I used this time to learn a new tool; in the meantime I installed all the tools I need to analyze malware on a new pc.
+My malware analysis pc died a month ago, and since this was a very long weekend with a holiday extending it, I used this time to learn about a tui library; in the meantime I installed all the tools I need to analyze malware on a new pc.
 
 I’ve been looking at several TUI libraries to use with Go, there are excellent libraries out there, and one of those is CLUI which the look and feel is based on Turbo Vision.
 
