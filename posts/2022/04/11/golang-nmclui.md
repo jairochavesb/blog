@@ -8,7 +8,7 @@ title: Jairo's Blog
 </center>
 <h6>April 11<sup>th</sup>, 2022</h6>
 
-# Golang - NMCLI Text User Interface.
+# Golang - NMCLUI Text User Interface.
 
 My malware analysis pc died a month ago, and since this was a very long weekend with a holiday extending it, I used this time to learn about a tui library; in the meantime I installed all the tools I need to analyze malware on a new pc.
 
