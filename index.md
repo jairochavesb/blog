@@ -3,6 +3,7 @@ layout: default
 ---
 
 <h3>LATEST POSTS</h3>
+* <a href="./posts/2022/05/26/malware_vaccines_part1.htlm">May 26, 2022 - Malware Vaccines Using Infection Markers. Part 1.</a>
 * <a href="./posts/2022/04/11/golang-nmclui.html">Apr 11, 2022 - Golang - nmclui </a>
 * <a href="./posts/2022/02/28/hermetic-wiper.html">Feb 28, 2022 - Analysis - Hermetic Wiper</a>
 * <a href="./posts/2022/02/16/elearnsec-ecmap-review.html">Feb 16, 2022 - eLearnSecurity - Certified Malware Analysis Professional</a>
