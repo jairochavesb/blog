@@ -3,6 +3,7 @@ layout: default
 ---
 
 <h3>LATEST POSTS</h3>
+* <a href="./posts/2022/09/15/eset-cracking-challenge.html">Sep 15, 2022 - ESET Cracking challenge</a>
 * <a href="./posts/2022/05/28/bookmarks.html">May 28, 2022 - CLI Bookmark Manager</a>
 * <a href="./posts/2022/05/26/malware_vaccines_part1.html">May 26, 2022 - Malware Vaccines Using Infection Markers. Part 1.</a>
 * <a href="./posts/2022/04/11/golang-nmclui.html">Apr 11, 2022 - Golang - nmclui </a>
