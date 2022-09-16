@@ -48,6 +48,7 @@ title: Jairo's Blog
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search post titles..." title="Type in a name">
 
 <ul id="myUL">
+  <li><a href="https://jairochavesb.github.io/blog/posts/2022/09/15/eset-cracking-challenge.html">Sep 15, 2022 - ESET Cracking challenge</a></li>
   <li><a href="https://jairochavesb.github.io/blog/posts/2022/05/28/bookmarks.html">May 28, 2022 - CLI Bookmark Manager</a></li>
   <li><a href="https://jairochavesb.github.io/blog/posts/2022/05/26/malware_vaccines_part1.html">Malware Vaccines Using Infection Markers. Part 1.</a></li>
   <li><a href="https://jairochavesb.github.io/blog/posts/2022/04/11/golang-nmclui.html">Golang - nmclui</a></li>
