@@ -202,16 +202,16 @@ Using the hint we can calculate new values.
 
 At this point we can reconstruct almost the whole password.
 
-char0 = 80 ‘P’
-char1 = 114 ‘r’
-char2 = 48 ‘0’ 
-char3 = 109	‘m’
-char4 = ?
-char5 = 116 	‘t'
-char6 = ?
-char7 = ?
-char8 = 85 ‘U’ 
-char9 = ?
+* char0 = 80 ‘P’
+* char1 = 114 ‘r’
+* char2 = 48 ‘0’ 
+* char3 = 109	‘m’
+* char4 = ?
+* char5 = 116 	‘t'
+* char6 = ?
+* char7 = ?
+* char8 = 85 ‘U’ 
+* char9 = ?
 
 There are only 4 characters left to guess. And because I got bored with the calculations to get the characters, I created a program to brute force it.
 
